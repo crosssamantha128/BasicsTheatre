@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All the world's a stage</title>
+    <style>
+      .i-love-theatre {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        border-radius: 30px;
+        background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+      } 
+      hr {
+      border-top: dashed #d59bf6;
+      max-width: 900px;
+      }
+      h1 {
+        color: #a56cc1;
+        font-size: 50px;
+        margin: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .menu-item {
+      text-decoration: none;
+      color: black;
+      }
+      a:visited {
+        color: #9896f1;
+      }
+      .menu-link:hover {
+        color: blueviolet;
+        cursor: pointer;
+      }
+      p {
+        padding: 6px;
+        border: 5px solid #d59bf6;
+        line-height: 20px;
+      }
+      img {
+        max-width: 500px;
+        padding-bottom: 20px;
+        padding-top: 15px;
+        border-radius: 30px;
+        opacity: 0.7;
+      }
+      button {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #8ef6e4;
+        padding: 16px;
+        border-radius: 30px; 
+        border: none;
+      }
+      button:hover {
+        color: black;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        background: transparent;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+    }
+      .built-by {
+        text-align: center;
+        font-family: monospace;
+        font-size: 18px;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <hr>
+    <div class="i-love-theatre">
+    <h1>The World of Theatre</h1>
+    <h2>
+      <span class="menu-item"> 
+      <a 
+      href="https://en.wikipedia.org/wiki/Theatre_of_ancient_Greece" 
+      target="_blank" 
+      class="ancient-greek-theatre menu-link"
+      >Ancient Greece,</a>
+      </span>to
+
+      <span class="menu-item">
+      <a 
+      href='https://en.wikipedia.org/wiki/William_Shakespeare'
+      target="_blank"
+      class="shakespeare menu-link"
+      >Shakespeare,</a>
+      </span>to
+
+      <span class="menu-item">
+      <a
+      href="https://en.wikipedia.org/wiki/Musical_theatre"
+      target="_blank"
+      class="musical-theatre menu-link"
+      >Musicals!</a>
+      </span></h2>
+
+    <p>Theatre is a collaborative form of performing art that uses live performers, usually actors or actresses, to present the experience of a real or imagined event before a live audience in a specific place, often a stage. The performers may communicate this experience to the audience through combinations of gesture, speech, song, music, and dance. Elements of art, such as painted scenery and stagecraft such as lighting are used to enhance the physicality, presence and immediacy of the experience. The specific place of the performance is also named by the word "theatre" as derived from the Ancient Greek théatron ("a place for viewing"), itself from theáomai ("to see", "to watch", "to observe").
+      <br>
+      ℹ️ <em>Info and links from wikipedia</em> ℹ️
+    </p>
+    
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/301/original/West-End-New-Round.jpg?1677494906"
+      alt="West End London"
+    />
+    <br>
+    <button class="find-out-more"><strong>What's on the West End🎭</strong></button>
+  </br>
+  </div>
+    <div class="built-by">
+    <em>This page was built by</em> MrsCross128🦄 </div>
+  <hr>
+<script>
+  function whatsonthewestend () {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email address?");
+      let month = prompt("Which month would you like to visit the West End? (e.g. June or December"); 
+      let heading = document.querySelector("h1");
+      if (month === "December") {
+      heading.innerHTML = 
+      "Thank you " + name + "! <br/ > We'll be in contact via email with dates and times for shows in " + month + " <br/ > 🎄☃️";
+    } else { 
+      heading.innerHTML = 
+      "Thank you " + name + "! <br/ > We'll be in contact via email with dates and times for shows in " + month + " <br/ > 🎭🎟️";
+    }
+    }
+  let button = document.querySelector("button");
+  button.addEventListener("click", whatsonthewestend);
+</script>
+  </body>
+</html>
